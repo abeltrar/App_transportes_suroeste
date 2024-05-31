@@ -1,0 +1,1020 @@
+ERROR - 2024-04-21 04:51:26 --> mysqli_sql_exception: Unknown column 'accion' in 'field list' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `u...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `u...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `u...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `u...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(31): CodeIgniter\Database\BaseBuilder->replace(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(118): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 04:51:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'accion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:accion:, :id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(31): CodeIgniter\Database\BaseBuilder->replace([...])
+ 3 APPPATH\Controllers\login\login.php(118): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:51:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'accion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'update\', \'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$jIizpXSc/fpEjmvLJ1wgDODuAWkL2buB1km1uZZjQvAp4omy3vBkG\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'update\', \'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$jIizpXSc/fpEjmvLJ1wgDODuAWkL2buB1km1uZZjQvAp4omy3vBkG\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:accion:, :id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(31): CodeIgniter\Database\BaseBuilder->replace([...])
+ 5 APPPATH\Controllers\login\login.php(118): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:51:26 --> [Caused by] mysqli_sql_exception: Unknown column 'accion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'update\', \'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$jIizpXSc/fpEjmvLJ1wgDODuAWkL2buB1km1uZZjQvAp4omy3vBkG\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'update\', \'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$jIizpXSc/fpEjmvLJ1wgDODuAWkL2buB1km1uZZjQvAp4omy3vBkG\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'update\', \'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$jIizpXSc/fpEjmvLJ1wgDODuAWkL2buB1km1uZZjQvAp4omy3vBkG\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:accion:, :id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(31): CodeIgniter\Database\BaseBuilder->replace([...])
+ 6 APPPATH\Controllers\login\login.php(118): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 04:51:41 --> mysqli_sql_exception: Unknown column 'accion' in 'field list' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `u...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `u...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `u...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `u...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(31): CodeIgniter\Database\BaseBuilder->replace(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(118): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 04:51:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'accion' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:accion:, :id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(31): CodeIgniter\Database\BaseBuilder->replace([...])
+ 3 APPPATH\Controllers\login\login.php(118): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:51:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'accion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'update\', \'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$swokfeNnHcAs1YVG/LXH1u3LN1sQDso0IFnik3RkC7o4plfKF9r4.\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'update\', \'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$swokfeNnHcAs1YVG/LXH1u3LN1sQDso0IFnik3RkC7o4plfKF9r4.\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:accion:, :id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(31): CodeIgniter\Database\BaseBuilder->replace([...])
+ 5 APPPATH\Controllers\login\login.php(118): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:51:41 --> [Caused by] mysqli_sql_exception: Unknown column 'accion' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'update\', \'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$swokfeNnHcAs1YVG/LXH1u3LN1sQDso0IFnik3RkC7o4plfKF9r4.\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'update\', \'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$swokfeNnHcAs1YVG/LXH1u3LN1sQDso0IFnik3RkC7o4plfKF9r4.\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'update\', \'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$swokfeNnHcAs1YVG/LXH1u3LN1sQDso0IFnik3RkC7o4plfKF9r4.\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`accion`, `id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:accion:, :id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(31): CodeIgniter\Database\BaseBuilder->replace([...])
+ 6 APPPATH\Controllers\login\login.php(118): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 04:54:03 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`)) in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `u...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `u...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `u...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `u...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 04:54:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 3 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:54:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$xhBQgabZZJly6it1s2obwe5V6S0dA8Z3wXzKj6TmWqUPzT84d/q..\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$xhBQgabZZJly6it1s2obwe5V6S0dA8Z3wXzKj6TmWqUPzT84d/q..\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 5 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:54:03 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$xhBQgabZZJly6it1s2obwe5V6S0dA8Z3wXzKj6TmWqUPzT84d/q..\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$xhBQgabZZJly6it1s2obwe5V6S0dA8Z3wXzKj6TmWqUPzT84d/q..\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$xhBQgabZZJly6it1s2obwe5V6S0dA8Z3wXzKj6TmWqUPzT84d/q..\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 6 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 04:55:57 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`)) in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `u...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `u...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `u...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `u...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(35): CodeIgniter\Database\BaseBuilder->replace(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 04:55:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(35): CodeIgniter\Database\BaseBuilder->replace([...])
+ 3 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:55:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$U0ve/QMYYtbw8mm0HkIQNOjZ9tb/CcVL4aMlc5Xjtn1//1OB9i/qC\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$U0ve/QMYYtbw8mm0HkIQNOjZ9tb/CcVL4aMlc5Xjtn1//1OB9i/qC\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(35): CodeIgniter\Database\BaseBuilder->replace([...])
+ 5 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:55:57 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$U0ve/QMYYtbw8mm0HkIQNOjZ9tb/CcVL4aMlc5Xjtn1//1OB9i/qC\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$U0ve/QMYYtbw8mm0HkIQNOjZ9tb/CcVL4aMlc5Xjtn1//1OB9i/qC\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$U0ve/QMYYtbw8mm0HkIQNOjZ9tb/CcVL4aMlc5Xjtn1//1OB9i/qC\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(35): CodeIgniter\Database\BaseBuilder->replace([...])
+ 6 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 04:56:04 --> mysqli_sql_exception: Duplicate entry 'angela' for key 'usuarios.usuario' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(35): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 04:56:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'angela' for key 'usuarios.usuario'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(35): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:56:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'angela' for key 'usuarios.usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$klWaAj1glgkPI5nu8mwTjOT68evW18Q9QSyci4Y5RdyHe/gL5vija\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$klWaAj1glgkPI5nu8mwTjOT68evW18Q9QSyci4Y5RdyHe/gL5vija\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(35): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:56:04 --> [Caused by] mysqli_sql_exception: Duplicate entry 'angela' for key 'usuarios.usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$klWaAj1glgkPI5nu8mwTjOT68evW18Q9QSyci4Y5RdyHe/gL5vija\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$klWaAj1glgkPI5nu8mwTjOT68evW18Q9QSyci4Y5RdyHe/gL5vija\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$klWaAj1glgkPI5nu8mwTjOT68evW18Q9QSyci4Y5RdyHe/gL5vija\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(35): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 04:56:51 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`)) in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `u...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `u...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `u...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `u...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 04:56:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :cedula:, :celular:, :email:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 3 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:56:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :cedula:, :celular:, :email:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 5 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:56:51 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :cedula:, :celular:, :email:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 6 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:57:36 --> ErrorException: Undefined variable $baseUrl
+in APPPATH\Controllers\login\login.php on line 143.
+ 1 APPPATH\Controllers\login\login.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseUrl', 'C:\\laragon\\www\\App_transports\\app\\Controllers\\login\\login.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 04:58:38 --> ErrorException: Undefined variable $baseUrl
+in APPPATH\Controllers\login\login.php on line 143.
+ 1 APPPATH\Controllers\login\login.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baseUrl', 'C:\\laragon\\www\\App_transports\\app\\Controllers\\login\\login.php', 143)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:01:20 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`)) in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `u...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `u...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `u...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `u...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:01:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 3 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:01:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$kaqvsQ7VZheV/UFzBNbUkeQA9urCC/bjNc9wOvtIo89JsiLpX8136\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$kaqvsQ7VZheV/UFzBNbUkeQA9urCC/bjNc9wOvtIo89JsiLpX8136\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 5 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:01:20 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$kaqvsQ7VZheV/UFzBNbUkeQA9urCC/bjNc9wOvtIo89JsiLpX8136\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$kaqvsQ7VZheV/UFzBNbUkeQA9urCC/bjNc9wOvtIo89JsiLpX8136\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$kaqvsQ7VZheV/UFzBNbUkeQA9urCC/bjNc9wOvtIo89JsiLpX8136\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 6 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:01:30 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`)) in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `u...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `u...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `u...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `u...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:01:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 3 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:01:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$M17SSx8egxLv9I8kWV9IjebpuQIPz2XfESkPAxBhRpiEIbY1N16c6\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$M17SSx8egxLv9I8kWV9IjebpuQIPz2XfESkPAxBhRpiEIbY1N16c6\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 5 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:01:30 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`transporte`.`vehiculos`, CONSTRAINT `FK_vehiculos_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$M17SSx8egxLv9I8kWV9IjebpuQIPz2XfESkPAxBhRpiEIbY1N16c6\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$M17SSx8egxLv9I8kWV9IjebpuQIPz2XfESkPAxBhRpiEIbY1N16c6\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (\'2\', \'angela\', \'Angela Del Pilar\', \'$2y$10$M17SSx8egxLv9I8kWV9IjebpuQIPz2XfESkPAxBhRpiEIbY1N16c6\', \'1004006369\', \'3044801988\', \'pili26belram@gmail.com\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2395): CodeIgniter\Database\BaseConnection->query('REPLACE INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`, `cedula`, `celular`, `email`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:, :cedula:, :celular:, :email:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(36): CodeIgniter\Database\BaseBuilder->replace([...])
+ 6 APPPATH\Controllers\login\login.php(121): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:06:23 --> mysqli_sql_exception: Duplicate entry '1004006312' for key 'usuarios.cedula' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuario...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuario...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuario...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuario...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(126): App\Models\login\loginModel->update_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:06:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:06:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$xk9pZL4IEoiYNLiozFd56.f8T6cjS121I3xj1lIaJ/yb0DWpzq9G2\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$xk9pZL4IEoiYNLiozFd56.f8T6cjS121I3xj1lIaJ/yb0DWpzq9G2\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:06:23 --> [Caused by] mysqli_sql_exception: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$xk9pZL4IEoiYNLiozFd56.f8T6cjS121I3xj1lIaJ/yb0DWpzq9G2\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$xk9pZL4IEoiYNLiozFd56.f8T6cjS121I3xj1lIaJ/yb0DWpzq9G2\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$xk9pZL4IEoiYNLiozFd56.f8T6cjS121I3xj1lIaJ/yb0DWpzq9G2\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:06:27 --> mysqli_sql_exception: Duplicate entry '1004006312' for key 'usuarios.cedula' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuario...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuario...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuario...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuario...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(126): App\Models\login\loginModel->update_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:06:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:06:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$AKqcepQaUOAjadMEkwIHt.W9YQ7vLpQmDDJoiM8qdH4VM7a2z5u16\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$AKqcepQaUOAjadMEkwIHt.W9YQ7vLpQmDDJoiM8qdH4VM7a2z5u16\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:06:27 --> [Caused by] mysqli_sql_exception: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$AKqcepQaUOAjadMEkwIHt.W9YQ7vLpQmDDJoiM8qdH4VM7a2z5u16\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$AKqcepQaUOAjadMEkwIHt.W9YQ7vLpQmDDJoiM8qdH4VM7a2z5u16\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$AKqcepQaUOAjadMEkwIHt.W9YQ7vLpQmDDJoiM8qdH4VM7a2z5u16\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:06:34 --> mysqli_sql_exception: Duplicate entry '1004006312' for key 'usuarios.cedula' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuario...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuario...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuario...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuario...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(126): App\Models\login\loginModel->update_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:06:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:06:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$rYpKqRk5NfTFxfKYGVNzOesbLjm3sVssVDmfhbybsoIg0q7R.6YjK\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$rYpKqRk5NfTFxfKYGVNzOesbLjm3sVssVDmfhbybsoIg0q7R.6YjK\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:06:34 --> [Caused by] mysqli_sql_exception: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$rYpKqRk5NfTFxfKYGVNzOesbLjm3sVssVDmfhbybsoIg0q7R.6YjK\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$rYpKqRk5NfTFxfKYGVNzOesbLjm3sVssVDmfhbybsoIg0q7R.6YjK\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela12\', `nombre` = \'Ingenieria\', `password` = \'$2y$10$rYpKqRk5NfTFxfKYGVNzOesbLjm3sVssVDmfhbybsoIg0q7R.6YjK\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'angela@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:06:52 --> mysqli_sql_exception: Duplicate entry '1004006369' for key 'usuarios.cedula' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuario...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuario...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuario...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuario...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(126): App\Models\login\loginModel->update_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:06:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006369' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:06:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006369' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'2\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$osswNUSPB5iWAuAzksRXn.0XlX1teKi.jDY/NQGH7y4GCiqsFKBYe\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'2\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$osswNUSPB5iWAuAzksRXn.0XlX1teKi.jDY/NQGH7y4GCiqsFKBYe\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:06:52 --> [Caused by] mysqli_sql_exception: Duplicate entry '1004006369' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuarios` SET `id_cargo` = \'2\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$osswNUSPB5iWAuAzksRXn.0XlX1teKi.jDY/NQGH7y4GCiqsFKBYe\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'2\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$osswNUSPB5iWAuAzksRXn.0XlX1teKi.jDY/NQGH7y4GCiqsFKBYe\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'2\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$osswNUSPB5iWAuAzksRXn.0XlX1teKi.jDY/NQGH7y4GCiqsFKBYe\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:06:55 --> mysqli_sql_exception: Duplicate entry '1004006369' for key 'usuarios.cedula' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuario...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuario...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuario...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuario...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(126): App\Models\login\loginModel->update_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:06:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006369' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:06:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006369' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$J6o4hVZbbBWi.Kh4mMx4VuZ294X3p3lympJuHZ2v8Grp7vbyVPI26\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$J6o4hVZbbBWi.Kh4mMx4VuZ294X3p3lympJuHZ2v8Grp7vbyVPI26\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:06:55 --> [Caused by] mysqli_sql_exception: Duplicate entry '1004006369' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$J6o4hVZbbBWi.Kh4mMx4VuZ294X3p3lympJuHZ2v8Grp7vbyVPI26\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$J6o4hVZbbBWi.Kh4mMx4VuZ294X3p3lympJuHZ2v8Grp7vbyVPI26\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$J6o4hVZbbBWi.Kh4mMx4VuZ294X3p3lympJuHZ2v8Grp7vbyVPI26\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:07:03 --> mysqli_sql_exception: Duplicate entry '1004006312' for key 'usuarios.cedula' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuario...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuario...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuario...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuario...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(126): App\Models\login\loginModel->update_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:07:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:07:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$lzibc2pxjU72kn7XZTPRmuPts.glIkCiPFk70RS1GGD9gfBNu1Afi\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$lzibc2pxjU72kn7XZTPRmuPts.glIkCiPFk70RS1GGD9gfBNu1Afi\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:07:03 --> [Caused by] mysqli_sql_exception: Duplicate entry '1004006312' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$lzibc2pxjU72kn7XZTPRmuPts.glIkCiPFk70RS1GGD9gfBNu1Afi\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$lzibc2pxjU72kn7XZTPRmuPts.glIkCiPFk70RS1GGD9gfBNu1Afi\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$lzibc2pxjU72kn7XZTPRmuPts.glIkCiPFk70RS1GGD9gfBNu1Afi\', `cedula` = \'1004006312\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:07:56 --> mysqli_sql_exception: Duplicate entry '1004006369' for key 'usuarios.cedula' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuario...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuario...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuario...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuario...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(126): App\Models\login\loginModel->update_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:07:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006369' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:07:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1004006369' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$SByE8uKjHIPcXN01P9DSvue9U1boTPNRhhE0rilkl2iAVfDmetDbO\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$SByE8uKjHIPcXN01P9DSvue9U1boTPNRhhE0rilkl2iAVfDmetDbO\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:07:56 --> [Caused by] mysqli_sql_exception: Duplicate entry '1004006369' for key 'usuarios.cedula'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$SByE8uKjHIPcXN01P9DSvue9U1boTPNRhhE0rilkl2iAVfDmetDbO\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$SByE8uKjHIPcXN01P9DSvue9U1boTPNRhhE0rilkl2iAVfDmetDbO\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET `id_cargo` = \'1\', `usuario` = \'angela\', `nombre` = \'Angela Beltran\', `password` = \'$2y$10$SByE8uKjHIPcXN01P9DSvue9U1boTPNRhhE0rilkl2iAVfDmetDbO\', `cedula` = \'1004006369\', `celular` = \'3044801988\', `email` = \'pili26belram@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET `id_cargo` = :id_cargo:, `usuario` = :usuario:, `nombre` = :nombre:, `password` = :password:, `cedula` = :cedula:, `celular` = :celular:, `email` = :email:', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:10:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario' at line 1 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuario...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuario...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuario...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuario...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update('1004006369', Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(126): App\Models\login\loginModel->update_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:10:48 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update('1004006369', [...])
+ 3 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:10:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update('1004006369', [...])
+ 5 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:10:48 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update('1004006369', [...])
+ 6 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:10:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario' at line 1 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuario...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuario...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuario...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuario...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update('1004006369', Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(126): App\Models\login\loginModel->update_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:10:58 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update('1004006369', [...])
+ 3 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:10:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update('1004006369', [...])
+ 5 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:10:58 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET 1004006369 = :1004006369:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(52): CodeIgniter\Database\BaseBuilder->update('1004006369', [...])
+ 6 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-21 05:16:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AN' at line 1 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuario...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuario...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuario...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuario...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(54): CodeIgniter\Database\BaseBuilder->update('13243435', Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(126): App\Models\login\loginModel->update_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-21 05:16:21 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AN' at line 1
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET 13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(54): CodeIgniter\Database\BaseBuilder->update('13243435', [...])
+ 3 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:16:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AN' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET 13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET 13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET 13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(54): CodeIgniter\Database\BaseBuilder->update('13243435', [...])
+ 5 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-21 05:16:21 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AN' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `usuarios` SET 13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuarios` SET 13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuarios` SET 13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `usuarios` SET 13243435 = :13243435:
+WHERE `id_cargo` = :id_cargo:
+AND `usuario` = :usuario:
+AND `nombre` = :nombre:
+AND `password` = :password:
+AND `cedula` = :cedula:
+AND `celular` = :celular:
+AND `email` = :email:', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(54): CodeIgniter\Database\BaseBuilder->update('13243435', [...])
+ 6 APPPATH\Controllers\login\login.php(126): App\Models\login\loginModel->update_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

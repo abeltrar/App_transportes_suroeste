@@ -1,0 +1,198 @@
+CRITICAL - 2024-04-09 02:29:42 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\login\login.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->login()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-09 02:29:48 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\login\login.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->login()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-09 02:30:55 --> Error: Cannot use object of type stdClass as array
+in APPPATH\Controllers\login\login.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->login()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-09 02:39:11 --> mysqli_sql_exception: Duplicate entry '0' for key 'usuarios.PRIMARY' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-09 02:39:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'usuarios.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-09 02:39:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'usuarios.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-09 02:39:11 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'usuarios.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-09 02:39:21 --> mysqli_sql_exception: Duplicate entry '0' for key 'usuarios.PRIMARY' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-09 02:39:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'usuarios.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-09 02:39:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'usuarios.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-09 02:39:21 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'usuarios.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-09 02:40:21 --> mysqli_sql_exception: Duplicate entry '0' for key 'usuarios.PRIMARY' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-09 02:40:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'usuarios.PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-09 02:40:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '0' for key 'usuarios.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-09 02:40:21 --> [Caused by] mysqli_sql_exception: Duplicate entry '0' for key 'usuarios.PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela13\', \'Ingenieria\', \'angela\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-09 02:56:44 --> mysqli_sql_exception: Duplicate entry 'angela' for key 'usuarios.usuario' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\login\login->registro()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-09 02:56:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'angela' for key 'usuarios.usuario'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 2 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-09 02:56:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'angela' for key 'usuarios.usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela\', \'Angela Del Pilar\', \'angela\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela\', \'Angela Del Pilar\', \'angela\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 4 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-09 02:56:44 --> [Caused by] mysqli_sql_exception: Duplicate entry 'angela' for key 'usuarios.usuario'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela\', \'Angela Del Pilar\', \'angela\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela\', \'Angela Del Pilar\', \'angela\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (\'1\', \'angela\', \'Angela Del Pilar\', \'angela\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuarios` (`id_cargo`, `usuario`, `nombre`, `password`) VALUES (:id_cargo:, :usuario:, :nombre:, :password:)', [...], false)
+ 5 APPPATH\Models\login\loginModel.php(23): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\login\login.php(77): App\Models\login\loginModel->insert_user([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\login\login->registro()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\login\login))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

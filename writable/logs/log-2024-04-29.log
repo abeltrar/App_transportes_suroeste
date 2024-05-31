@@ -1,0 +1,169 @@
+ERROR - 2024-04-29 01:18:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY a.id' at line 15 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n            S...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\laragon\www\App_transports\app\Models\viajes\viajesModel.php(63): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\laragon\www\App_transports\app\Controllers\Viajes\viajes.php(145): App\Models\viajes\viajesModel->get_data_viajes('mis_viajes')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->get_data_viajes()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-29 01:18:35 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY a.id' at line 15
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\viajes\viajesModel.php(63): CodeIgniter\Database\BaseConnection->query('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            WHERE a.id_usuario = 21
+            ORDER BY a.fecha_viaje ASC
+            GROUP BY a.id
+        ')
+ 2 APPPATH\Controllers\Viajes\viajes.php(145): App\Models\viajes\viajesModel->get_data_viajes('mis_viajes')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->get_data_viajes()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 01:18:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY a.id' at line 15
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            WHERE a.id_usuario = 21
+            ORDER BY a.fecha_viaje ASC
+            GROUP BY a.id
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            WHERE a.id_usuario = 21
+            ORDER BY a.fecha_viaje ASC
+            GROUP BY a.id
+        ')
+ 3 APPPATH\Models\viajes\viajesModel.php(63): CodeIgniter\Database\BaseConnection->query('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            WHERE a.id_usuario = 21
+            ORDER BY a.fecha_viaje ASC
+            GROUP BY a.id
+        ')
+ 4 APPPATH\Controllers\Viajes\viajes.php(145): App\Models\viajes\viajesModel->get_data_viajes('mis_viajes')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->get_data_viajes()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-29 01:18:35 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY a.id' at line 15
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            WHERE a.id_usuario = 21
+            ORDER BY a.fecha_viaje ASC
+            GROUP BY a.id
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            WHERE a.id_usuario = 21
+            ORDER BY a.fecha_viaje ASC
+            GROUP BY a.id
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            WHERE a.id_usuario = 21
+            ORDER BY a.fecha_viaje ASC
+            GROUP BY a.id
+        ')
+ 4 APPPATH\Models\viajes\viajesModel.php(63): CodeIgniter\Database\BaseConnection->query('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            WHERE a.id_usuario = 21
+            ORDER BY a.fecha_viaje ASC
+            GROUP BY a.id
+        ')
+ 5 APPPATH\Controllers\Viajes\viajes.php(145): App\Models\viajes\viajesModel->get_data_viajes('mis_viajes')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->get_data_viajes()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,256 @@
+#miniAlert {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 2000; /* Ajusta el valor de z-index para que esté sobre las modales */
+}
+
+#miniAlert.show {
+    display: block;
+}
+
+ /* Estilos específicos para diferentes contextos */
+ .alert-success {
+    background-color: #28a745; /* Verde */
+}
+
+.alert-warning {
+    background-color: #ffc107; /* Amarillo */
+}
+
+.alert-danger {
+    background-color: #dc3545; /* Rojo */
+}
+
+
+.table-wrapper {
+    width: 100%; /* Establecer el ancho al 100% */
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;	
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+
+
+.container_table{
+    width: 100%;
+    overflow-x: auto; /* Agregar desplazamiento horizontal si es necesario */
+
+}
+
+
+.container_table::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  .container_table::-webkit-scrollbar-button {
+    width: 6px;
+    height: 6px;
+  }
+  .container_table::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 14px none #ffffff;
+    border-radius: 33px;
+  }
+  .container_table::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+  .container_table::-webkit-scrollbar-thumb:active {
+    background: #000000;
+  }
+  .container_table::-webkit-scrollbar-track {
+    background: #666666;
+    border: 13px none #ffffff;
+    border-radius: 17px;
+  }
+  .container_table::-webkit-scrollbar-track:hover {
+    background: #666666;
+  }
+  .container_table::-webkit-scrollbar-track:active {
+    background: #333333;
+  }
+  .container_table::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  
+
+
+
+.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+}
+.table-title h2 {
+    margin: 6px 0 0;
+    font-size: 22px;
+}
+.table-title .add-new {
+    float: right;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: none;
+    min-width: 100px;
+    border-radius: 50px;
+    line-height: 13px;
+}
+.table-title .add-new i {
+    margin-right: 4px;
+}
+/* table.table {
+    table-layout: fixed;
+} */
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+}
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+table.table th:last-child {
+    width: 100px;
+}
+table.table td a {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    min-width: 24px;
+}    
+table.table td a.add {
+    color: #27C46B;
+}
+table.table td a.edit {
+    color: #FFC107;
+}
+table.table td a.delete {
+    color: #E34724;
+}
+table.table td i {
+    font-size: 19px;
+}
+table.table td a.add i {
+    font-size: 24px;
+    margin-right: -1px;
+    position: relative;
+    top: 3px;
+}    
+table.table .form-control {
+    height: 32px;
+    line-height: 32px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+table.table .form-control.error {
+    border-color: #f50000;
+}
+table.table td .add {
+    display: none;
+}
+
+.color_text_tittle{
+    color: #9b9a9a;
+}
+
+@keyframes moveCar {
+    0% { left: 20%; } /* Posición inicial fuera del contenedor */
+    100% { left: 0; } /* Posición final a la izquierda */
+}
+
+.car {
+    position: relative; /* Para permitir el posicionamiento absoluto relativo al contenedor */
+    animation: moveCar 8s linear infinite; /* Animación que dura 5 segundos, se mueve de manera lineal y se repite infinitamente */
+}
+
+.contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 91%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
+    color: #0062cc;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #0062cc;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+
+.modal_viajes{
+    background: -webkit-linear-gradient(left, #4e73df, #1e409e);
+}
+
+.activo {
+    color: rgb(17, 111, 218); 
+}
+
+.finalizado {
+    color: rgb(13, 206, 45); 
+}
+
+.proximo{
+    color: rgb(206, 161, 13); 
+
+}
+
+.no-iniciado {
+   
+    color: green; 
+}
+
+.iniciado {
+ 
+    color: red; 
+}
+
+#filtro{
+    border-radius: 16px;
+    float: right;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 8px;
+}

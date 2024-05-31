@@ -1,0 +1,1297 @@
+CRITICAL - 2024-05-21 04:02:30 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Controllers\reservas\reservas.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 04:02:53 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Controllers\reservas\reservas.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 04:03:14 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Controllers\reservas\reservas.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 04:03:40 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Controllers\reservas\reservas.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 04:05:10 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Controllers\reservas\reservas.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 04:05:49 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Controllers\reservas\reservas.php on line 82.
+ 1 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 2 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:41:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:41:36 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:41:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:41:36 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:41:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:41:39 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:41:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:41:39 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:41:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:41:46 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:41:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:41:46 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:41:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:41:49 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:41:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:41:49 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:43:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:43:36 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:43:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:43:36 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:43:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:43:52 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:43:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:43:52 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:44:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:44:13 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:44:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:44:13 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:44:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:44:36 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:44:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:44:36 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:44:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:44:42 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:44:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:44:42 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:45:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:45:03 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:45:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:45:03 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(88): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:46:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:46:07 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:46:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:46:07 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:46:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:46:25 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:46:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:46:25 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-05-21 21:46:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n\r\n           ...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\r\n           ...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\r\n           ...')
+#3 C:\laragon\www\App_transports\app\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('\r\n\r\n           ...', Array)
+#4 C:\laragon\www\App_transports\app\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-21 21:46:45 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 2 APPPATH\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:46:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 4 APPPATH\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-21 21:46:45 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 'Activo'' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = \'21\'
+           and a.estado_reserva == \'Activo\'
+
+
+        ')
+ 4 APPPATH\Models\reservas\reservasModel.php(77): CodeIgniter\Database\BaseConnection->query('
+
+           Select * from reservas a
+           where a.id_usuario_reserva = ?
+           and a.estado_reserva == \'Activo\'
+
+
+        ', [...])
+ 5 APPPATH\Controllers\reservas\reservas.php(92): App\Models\reservas\reservasModel->get_info_reserva('21')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\reservas\reservas->reservar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\reservas\reservas))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,40 @@
+.btn_guardar_auto{
+    width: 41vh;
+}
+
+
+#miniAlert {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 2000; /* Ajusta el valor de z-index para que esté sobre las modales */
+}
+
+#miniAlert.show {
+    display: block;
+}
+
+ /* Estilos específicos para diferentes contextos */
+ .alert-success {
+    background-color: #28a745; /* Verde */
+}
+
+.alert-warning {
+    background-color: #ffc107; /* Amarillo */
+}
+
+.alert-danger {
+    background-color: #dc3545; /* Rojo */
+}
+
+
+.texto-centrado {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}

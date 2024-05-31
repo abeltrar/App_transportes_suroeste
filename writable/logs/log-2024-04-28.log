@@ -1,0 +1,232 @@
+CRITICAL - 2024-04-28 02:09:42 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Viajes\viajes.php on line 57.
+ 1 APPPATH\Controllers\Viajes\viajes.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\App_transports\\app\\Controllers\\Viajes\\viajes.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->get_destinos()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-28 02:26:28 --> ErrorException: Undefined array key "id_vehiculo"
+in APPPATH\Controllers\Viajes\viajes.php on line 75.
+ 1 APPPATH\Controllers\Viajes\viajes.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_vehiculo"', 'C:\\laragon\\www\\App_transports\\app\\Controllers\\Viajes\\viajes.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->guardar_viaje()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-28 04:36:34 --> mysqli_sql_exception: Unknown column 'id_viaje' in 'field list' in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `viajes_...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `viajes_...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `viajes_...')
+#3 C:\laragon\www\App_transports\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `viajes_...', Array, false)
+#4 C:\laragon\www\App_transports\app\Models\viajes\viajesModel.php(73): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\laragon\www\App_transports\app\Controllers\Viajes\viajes.php(96): App\Models\viajes\viajesModel->update_viaje(Array)
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->guardar_viaje()
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+#8 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-04-28 04:36:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_viaje' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `viajes_conductor` SET `id_viaje` = :id_viaje:, `id_destino` = :id_destino:, `cantidad_pasajeros_maxima` = :cantidad_pasajeros_maxima:, `hora_llegada` = :hora_llegada:, `novedades_viaje` = :novedades_viaje:, `disponibilidad_encomiendas` = :disponibilidad_encomiendas:, `posibilidad_mascotas` = :posibilidad_mascotas:, `hora_salida` = :hora_salida:, `fecha_viaje` = :fecha_viaje:, `id_usuario` = :id_usuario:, `id_vehiculo` = :id_vehiculo:
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Models\viajes\viajesModel.php(73): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Viajes\viajes.php(96): App\Models\viajes\viajesModel->update_viaje([...])
+ 4 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->guardar_viaje()
+ 5 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-28 04:36:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_viaje' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `viajes_conductor` SET `id_viaje` = \'3\', `id_destino` = \'1\', `cantidad_pasajeros_maxima` = \'10\', `hora_llegada` = \'15:08\', `novedades_viaje` = \'No\', `disponibilidad_encomiendas` = \'si\', `posibilidad_mascotas` = \'si\', `hora_salida` = \'13:09:00\', `fecha_viaje` = \'2024-04-29\', `id_usuario` = \'21\', `id_vehiculo` = \'1\'
+WHERE `id` = \'3\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `viajes_conductor` SET `id_viaje` = \'3\', `id_destino` = \'1\', `cantidad_pasajeros_maxima` = \'10\', `hora_llegada` = \'15:08\', `novedades_viaje` = \'No\', `disponibilidad_encomiendas` = \'si\', `posibilidad_mascotas` = \'si\', `hora_salida` = \'13:09:00\', `fecha_viaje` = \'2024-04-29\', `id_usuario` = \'21\', `id_vehiculo` = \'1\'
+WHERE `id` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `viajes_conductor` SET `id_viaje` = :id_viaje:, `id_destino` = :id_destino:, `cantidad_pasajeros_maxima` = :cantidad_pasajeros_maxima:, `hora_llegada` = :hora_llegada:, `novedades_viaje` = :novedades_viaje:, `disponibilidad_encomiendas` = :disponibilidad_encomiendas:, `posibilidad_mascotas` = :posibilidad_mascotas:, `hora_salida` = :hora_salida:, `fecha_viaje` = :fecha_viaje:, `id_usuario` = :id_usuario:, `id_vehiculo` = :id_vehiculo:
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH\Models\viajes\viajesModel.php(73): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Viajes\viajes.php(96): App\Models\viajes\viajesModel->update_viaje([...])
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->guardar_viaje()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-28 04:36:34 --> [Caused by] mysqli_sql_exception: Unknown column 'id_viaje' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `viajes_conductor` SET `id_viaje` = \'3\', `id_destino` = \'1\', `cantidad_pasajeros_maxima` = \'10\', `hora_llegada` = \'15:08\', `novedades_viaje` = \'No\', `disponibilidad_encomiendas` = \'si\', `posibilidad_mascotas` = \'si\', `hora_salida` = \'13:09:00\', `fecha_viaje` = \'2024-04-29\', `id_usuario` = \'21\', `id_vehiculo` = \'1\'
+WHERE `id` = \'3\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `viajes_conductor` SET `id_viaje` = \'3\', `id_destino` = \'1\', `cantidad_pasajeros_maxima` = \'10\', `hora_llegada` = \'15:08\', `novedades_viaje` = \'No\', `disponibilidad_encomiendas` = \'si\', `posibilidad_mascotas` = \'si\', `hora_salida` = \'13:09:00\', `fecha_viaje` = \'2024-04-29\', `id_usuario` = \'21\', `id_vehiculo` = \'1\'
+WHERE `id` = \'3\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `viajes_conductor` SET `id_viaje` = \'3\', `id_destino` = \'1\', `cantidad_pasajeros_maxima` = \'10\', `hora_llegada` = \'15:08\', `novedades_viaje` = \'No\', `disponibilidad_encomiendas` = \'si\', `posibilidad_mascotas` = \'si\', `hora_salida` = \'13:09:00\', `fecha_viaje` = \'2024-04-29\', `id_usuario` = \'21\', `id_vehiculo` = \'1\'
+WHERE `id` = \'3\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `viajes_conductor` SET `id_viaje` = :id_viaje:, `id_destino` = :id_destino:, `cantidad_pasajeros_maxima` = :cantidad_pasajeros_maxima:, `hora_llegada` = :hora_llegada:, `novedades_viaje` = :novedades_viaje:, `disponibilidad_encomiendas` = :disponibilidad_encomiendas:, `posibilidad_mascotas` = :posibilidad_mascotas:, `hora_salida` = :hora_salida:, `fecha_viaje` = :fecha_viaje:, `id_usuario` = :id_usuario:, `id_vehiculo` = :id_vehiculo:
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\viajes\viajesModel.php(73): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Viajes\viajes.php(96): App\Models\viajes\viajesModel->update_viaje([...])
+ 7 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->guardar_viaje()
+ 8 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-04-28 05:14:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '$where
+            GROUP BY a.id' at line 13 in C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\App_transports\system\Database\MySQLi\Connection.php(306): mysqli->query('\r\n            S...', 0)
+#1 C:\laragon\www\App_transports\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\laragon\www\App_transports\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\laragon\www\App_transports\app\Models\viajes\viajesModel.php(50): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\laragon\www\App_transports\app\Controllers\Viajes\viajes.php(145): App\Models\viajes\viajesModel->get_data_viajes('administracion')
+#5 C:\laragon\www\App_transports\system\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->get_data_viajes()
+#6 C:\laragon\www\App_transports\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+#7 C:\laragon\www\App_transports\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\App_transports\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-04-28 05:14:30 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '$where
+            GROUP BY a.id' at line 13
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 APPPATH\Models\viajes\viajesModel.php(50): CodeIgniter\Database\BaseConnection->query('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            $where
+            GROUP BY a.id
+        ')
+ 2 APPPATH\Controllers\Viajes\viajes.php(145): App\Models\viajes\viajesModel->get_data_viajes('administracion')
+ 3 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->get_data_viajes()
+ 4 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-28 05:14:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '$where
+            GROUP BY a.id' at line 13
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            $where
+            GROUP BY a.id
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            $where
+            GROUP BY a.id
+        ')
+ 3 APPPATH\Models\viajes\viajesModel.php(50): CodeIgniter\Database\BaseConnection->query('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            $where
+            GROUP BY a.id
+        ')
+ 4 APPPATH\Controllers\Viajes\viajes.php(145): App\Models\viajes\viajesModel->get_data_viajes('administracion')
+ 5 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->get_data_viajes()
+ 6 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-04-28 05:14:30 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '$where
+            GROUP BY a.id' at line 13
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            $where
+            GROUP BY a.id
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            $where
+            GROUP BY a.id
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            $where
+            GROUP BY a.id
+        ')
+ 4 APPPATH\Models\viajes\viajesModel.php(50): CodeIgniter\Database\BaseConnection->query('
+            SELECT a.* , b.nombre, c.placa,d.destino,
+            if(e.id_viaje is null, 0, count(e.id_viaje)) as cantidad_pasajeros_registrados,
+            if(a.fecha_viaje >= CURDATE(),"Activo","Finalizado") as estado
+            FROM viajes_conductor a
+            left join usuarios b
+            on a.id_usuario = b.id
+            left join vehiculos c
+            on c.id = a.id_vehiculo
+            left join destinos d
+            on d.id = a.id_destino
+            left join reservas e
+            on e.id_viaje=a.id
+            $where
+            GROUP BY a.id
+        ')
+ 5 APPPATH\Controllers\Viajes\viajes.php(145): App\Models\viajes\viajesModel->get_data_viajes('administracion')
+ 6 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Viajes\Viajes->get_data_viajes()
+ 7 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Viajes\Viajes))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
